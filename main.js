@@ -9,7 +9,7 @@ import App from './App.jsx';
 	items = response.body.items;
 });*/
 
-/*let items =    [{id:'1',name:'milk',price:'$20'},
+let items =    [{id:'1',name:'milk',price:'$20'},
 			   {id:'2',name:'water',price:'$12'},
 			   {id:'3',name:'meat',price:'$25'},
 			   {id:'4',name:'grocery',price:'$30'},
@@ -28,13 +28,6 @@ import App from './App.jsx';
 			   {id:'17',name:'Hat',price:'$13'},
 			   {id:'18',name:'Ice-Cream',price:'$12'}
 
-   			 ];*/
+   			 ];
 
-let items = function(){
-	var items
-	Request.get('/items.json').then((response)=>{
-	 items = response.body.items;
-	 return items;
-   });
-}
-ReactDOM.render(<App items = {items()} />, document.getElementById('app')); 
+ReactDOM.render(<App items = {items} />, document.getElementById('app')); 

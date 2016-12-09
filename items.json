@@ -1,5 +1,5 @@
 
-	{"items":[{"id":"1","name":"milk","price":"$20"},
+	items:[{"id":"1","name":"milk","price":"$20"},
 			   {"id":"2","name":"water","price":"$12"},
 			   {"id":"3","name":"meat","price":"$25"},
 			   {"id":"4","name":"grocery","price":"$30"},
@@ -18,7 +18,7 @@
 			   {"id":"17","name":"Hat","price":"$13"},
 			   {"id":"18","name":"Ice-cream","price":"$12"}
 
-   			 ]}
+   			 ]
 			 
 			 
 			

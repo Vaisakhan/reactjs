@@ -93,15 +93,20 @@ class App extends React.Component {
 	  };
       
       
-	  let sortedItems = this.props.items.sort('name');
-
+	  
+      
       let filteredItems = this.props.items.filter(
       (item) => {
        return this.state.search && item.name.toLowerCase().startsWith(
          this.state.search.toLowerCase())
       	}
       );
-
+     
+     let filteredSortedItems = filteredItems.sort(function(a, b){
+                                if(a.name< b.name) return -1;
+                                if(a.name> b.name) return 1;
+                                return 0;
+                              });
 
 
       return (
@@ -128,7 +133,7 @@ class App extends React.Component {
 	         	<span><button style = {searchBtn} onClick={this.resetSearch.bind(this)}>reset</button></span>
 	          </div>
 	         
-	          <SearchItems items={filteredItems}/>
+	          <SearchItems items={filteredSortedItems}/>
               
 	          <div>
                <span ></span>
